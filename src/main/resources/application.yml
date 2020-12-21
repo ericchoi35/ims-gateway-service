@@ -1,0 +1,22 @@
+server:
+  port: 5000
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://eurekaserverservice-env.eba-dqvupxnt.us-west-2.elasticbeanstalk.com/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+spring:
+  application:
+    name: gateway-service
+
+logging:
+  level:
+    com.imax.ms: DEBUG
